@@ -28,7 +28,11 @@ Externamente el servidor MySQL estará habiliatdo por el puerto 8889, e internam
 
 #### Redis
 
-El servidor Redis estará habiliatdo por el puerto 6379, desde la VM y también externamente.
+Externamente el servidor Redis estará habiliatdo por el puerto 8790, e internamente en la VM estará habilitado en el puerto usual 6379.
+
+#### MongoDB
+
+Externamente el servidor MongoDB estará habiliatdo por el puerto 8791, e internamente en la VM estará habilitado en el puerto usual 27017.
 
 Detalles técnicos
 -----------------
@@ -37,6 +41,7 @@ Detalles técnicos
 * PHP 5.5 + Composer
 * MySQL 5.5
 * Redis 2.8.4
+* MongoDB 2.4.9
 
 La raíz del proyecto estará en la carpeta `htdocs` allí podrá ubicar los archivos de su proyecto.
 

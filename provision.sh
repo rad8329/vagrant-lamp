@@ -4,7 +4,8 @@ apache_config_file="/etc/apache2/apache2.conf"
 php_config_file="/etc/php5/apache2/php.ini"
 xdebug_config_file="/etc/php5/mods-available/xdebug.ini"
 mysql_config_file="/etc/mysql/my.cnf"
-
+redis_config_file="/etc/redis/redis.conf"
+mongo_config_file="/etc/mongodb.conf"
 
 # Update the server
 apt-get update
@@ -33,8 +34,11 @@ apt-get -y install build-essential binutils-doc git
 # Install Redis Server [For caching several apps]
 apt-get -y install redis-server
 
+sed -i "s/bind 127.0.0.1/bind 0.0.0.0/g" ${redis_config_file}
+
 # Install Mongo Server
 apt-get -y install mongodb-server
+sed -i "s/bind_ip = 127.0.0.1/bind_ip = 0.0.0.0/g" ${mongo_config_file}
 
 # Install Apache
 echo "Installing Apache2"
