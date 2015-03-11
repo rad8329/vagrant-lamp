@@ -33,6 +33,9 @@ apt-get -y install build-essential binutils-doc git
 # Install Redis Server [For caching several apps]
 apt-get -y install redis-server
 
+# Install Mongo Server
+apt-get -y install mongodb-server
+
 # Install Apache
 echo "Installing Apache2"
 apt-get -y install apache2
@@ -41,7 +44,7 @@ sed -i "s/AllowOverride None/AllowOverride All/g" ${apache_config_file}
 
 # Install PHP
 echo "Installing PHP5"
-apt-get -y install php5 php5-curl php5-mysql php5-sqlite php5-xdebug php5-mcrypt php5-imagick
+apt-get -y install php5 php5-curl php5-mysql php5-sqlite php5-xdebug php5-mcrypt php5-imagick php5-mongo
 php5enmod mcrypt
 
 
