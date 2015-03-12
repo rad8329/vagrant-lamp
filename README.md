@@ -7,7 +7,7 @@ Si ves que necesitas un web stack completo, pero también uno que sea personaliz
 
 Requerimientos
 ------------
-* VirtualBox <http://www.virtualbox.com>
+* VirtualBox <http://www.virtualbox.org>
 * Vagrant <http://www.vagrantup.com>
 * Git <http://git-scm.com/>
 
