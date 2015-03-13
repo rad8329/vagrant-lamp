@@ -18,7 +18,7 @@ Requerimientos
 	$ vagrant up
 
 #### Apache
-El servidor Apache estará habiltado en <http://localhost>
+El servidor Apache estará habiltado en <http://localhost:8788>
 
 #### MySQL
 Externamente el servidor MySQL estará habiliatdo por el puerto 8889, e internamente en la VM estará habilitado en el puerto usual 3306  o por socket.

@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = "ubuntu/trusty64"
 
     # Forward ports for servers #
-    config.vm.network "forwarded_port", guest: 80, host: 80 #Apache
+    config.vm.network "forwarded_port", guest: 80, host: 8788 #Apache
     config.vm.network "forwarded_port", guest: 3306, host: 8789 #MySQL
     config.vm.network "forwarded_port", guest: 6379, host: 8790 #Redis
 	config.vm.network "forwarded_port", guest: 27017, host: 8791 #Mongo
