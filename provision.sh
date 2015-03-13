@@ -1,11 +1,15 @@
 #!/bin/bash
 
+root_profile="/root/.profile"
 apache_config_file="/etc/apache2/apache2.conf"
 php_config_file="/etc/php5/apache2/php.ini"
 xdebug_config_file="/etc/php5/mods-available/xdebug.ini"
 mysql_config_file="/etc/mysql/my.cnf"
 redis_config_file="/etc/redis/redis.conf"
 mongo_config_file="/etc/mongodb.conf"
+
+# To prevent warnings like "stdin: is not a tty"
+sed -i "s/^mesg n$/tty -s \&\& mesg n/g" ${root_profile}
 
 # Update the server
 apt-get update
