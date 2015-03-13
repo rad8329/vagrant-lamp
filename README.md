@@ -13,7 +13,7 @@ Requerimientos
 
 
 ### Startup
-	$ git clone https://rad8329@bitbucket.org/rad8329/vagrant-lamp.git
+	$ git clone https://github.com/rad8329/vagrant-lamp.git
 	$ cd vagrant-lamp
 	$ vagrant up
 
