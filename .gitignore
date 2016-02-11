@@ -1,6 +1,8 @@
 .DS_Store
 *.swp
 .vagrant
+!htdocs
 htdocs/*
+!htdocs/.gitkeep
 *~
 desktop.ini
