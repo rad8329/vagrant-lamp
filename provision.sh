@@ -90,7 +90,4 @@ service apache2 restart
 service mysql restart
 service redis-server restart
 
-# Cleanup the default HTML file created by Apache
-rm /var/www/html/index.html
-
 touch /var/lock/vagrant-provision

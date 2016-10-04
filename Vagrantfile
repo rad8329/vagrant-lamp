@@ -14,14 +14,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.network "forwarded_port", guest: 6379, host: 8790 #Redis
     config.vm.network "forwarded_port", guest: 27017, host: 8791 #Mongo
 
-    config.vm.synced_folder "htdocs", "/var/www/html"
+    config.vm.synced_folder "htdocs", "/var/www/html", owner: "www-data", group: "www-data"
     config.vm.provision "shell", path: "provision.sh"
 
-   config.vm.provider "virtualbox" do |vb|
-     # Don't boot with headless mode #
-     #vb.gui = true
+    config.vm.provider "virtualbox" do |vb|
+      vb.name = 'php5box'
+      # Don't boot with headless mode #
+      #vb.gui = true
   
-     # Use VBoxManage to customize the VM. For example to change memory: #
-     vb.customize ["modifyvm", :id, "--memory", "1024"]
-   end
+      # Use VBoxManage to customize the VM. For example to change memory: #
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
 end
