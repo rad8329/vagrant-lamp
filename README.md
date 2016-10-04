@@ -1,10 +1,3 @@
-Vagrant LAMP
-============
-¿Quiere probar una nueva aplicación web, pero no quiere afectar su sistema actual Apache/PHP/MySQL? 
-Aplicaciones como MAMP/XAMPP son grandes, pero es difícil de mantener múltiples aplicaciones web separadas, y con configuraciones propias para cada una.
-
-Si ves que necesitas un web stack completo, pero también uno que sea personalizable, utiliza este proyecto Vagrant.
-
 Requerimientos
 ------------
 * VirtualBox <http://www.virtualbox.org>
